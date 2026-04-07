@@ -223,10 +223,10 @@ FLUSH PRIVILEGES;
 **3. Configure application.properties**
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/job_portal
-spring.datasource.username=jobuser
-spring.datasource.password=jobpassword123
+spring.datasource.username=
+spring.datasource.password=
 
-jwt.secret=404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+jwt.secret=
 jwt.expiration=86400000
 
 aws.access-key=YOUR_ACCESS_KEY
