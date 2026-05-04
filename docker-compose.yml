@@ -6,10 +6,10 @@ services:
     image: mysql:8.0
     container_name: job_portal_db
     environment:
-      MYSQL_DATABASE: job_portal
-      MYSQL_USER: jobuser
-      MYSQL_PASSWORD: jobpassword123
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: jobportal
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     ports:
       - "3307:3306"
     volumes:
@@ -37,8 +37,8 @@ services:
       SPRING_MAIL_PASSWORD: ${MAIL_PASSWORD}
       AWS_ACCESS_KEY: ${AWS_ACCESS_KEY}
       AWS_SECRET_KEY: ${AWS_SECRET_KEY}
-      AWS_REGION: ap-south-1
-      AWS_BUCKET_NAME: job-portal-resumes-utkarsh
+      AWS_REGION: ap-southeast-2
+      AWS_BUCKET_NAME: job-portal-resumes-utkarsh-542776677536-ap-southeast-2-an
 
     depends_on:
       mysql:

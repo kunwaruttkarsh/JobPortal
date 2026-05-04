@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: jobportal
+    runtime: docker
+    repo: https://github.com/kunwaruttkarsh/JobPortal
+    branch: main
+    plan: free
+
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
+
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+
+      - key: JWT_SECRET
+        generateValue: true
+
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false
+
+      - key: AWS_ACCESS_KEY
+        sync: false
+      - key: AWS_SECRET_KEY
+        sync: false

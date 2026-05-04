@@ -3,6 +3,7 @@ package com.jobportal.controller;
 import com.jobportal.dto.request.JobRequest;
 import com.jobportal.dto.response.JobResponse;
 import com.jobportal.service.impl.JobServiceImpl;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/jobs")
 @RequiredArgsConstructor
+@Tag(name = "Job APIs")
 public class JobController {
 
     private final JobServiceImpl jobService;

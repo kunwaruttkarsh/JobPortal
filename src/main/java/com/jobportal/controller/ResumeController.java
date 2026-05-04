@@ -2,6 +2,7 @@ package com.jobportal.controller;
 
 import com.jobportal.repository.UserRepository;
 import com.jobportal.service.S3Service;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import java.util.Map;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/resume")
+@Tag(name = "Resume APIs")
 public class ResumeController {
 
     private final S3Service s3Service;
