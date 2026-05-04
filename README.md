@@ -6,8 +6,10 @@ A production-ready Job Portal backend built with **Java 21** and **Spring Boot 3
 
 ## 🔗 Links
 
+- **WebLink:** https://jobportal-w5rv.onrender.com/swagger-ui/index.html
 - **GitHub:** https://github.com/kunwaruttkarsh/JobPortal
 - **Author:** Kunwar Uttkarsh Singh
+- 
 
 ---
 
@@ -22,7 +24,6 @@ A production-ready Job Portal backend built with **Java 21** and **Spring Boot 3
 | ORM | Spring Data JPA + Hibernate |
 | File Storage | AWS S3 (presigned URLs) |
 | Email | JavaMailSender + Gmail SMTP |
-| Testing | JUnit 5 + Mockito + MockMvc |
 | Containerization | Docker + docker-compose |
 
 ---
@@ -214,10 +215,7 @@ git clone https://github.com/kunwaruttkarsh/JobPortal.git
 
 **2. Create MySQL database**
 ```sql
-CREATE DATABASE job_portal;
-CREATE USER 'jobuser'@'localhost' IDENTIFIED BY 'jobpassword123';
-GRANT ALL PRIVILEGES ON job_portal.* TO 'jobuser'@'localhost';
-FLUSH PRIVILEGES;
+
 ```
 
 **3. Configure application.properties**
